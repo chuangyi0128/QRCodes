@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *scannerView;
+@property (strong, nonatomic) IBOutlet UILabel *scannerTipLabel;
+@property (strong, nonatomic) IBOutlet UITextView *scannerResultView;
 
 @end
 

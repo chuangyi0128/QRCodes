@@ -14,6 +14,7 @@
 		447A85411A5E70C90041F239 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447A85401A5E70C90041F239 /* Images.xcassets */; };
 		447A85441A5E70C90041F239 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447A85421A5E70C90041F239 /* LaunchScreen.xib */; };
 		447A85501A5E70C90041F239 /* QRCodesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 447A854F1A5E70C90041F239 /* QRCodesTests.m */; };
+		447A855A1A5E72A80041F239 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447A85591A5E72A80041F239 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		447A85491A5E70C90041F239 /* QRCodesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		447A854E1A5E70C90041F239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447A854F1A5E70C90041F239 /* QRCodesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodesTests.m; sourceTree = "<group>"; };
+		447A85591A5E72A80041F239 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447A855A1A5E72A80041F239 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		447A85271A5E70C90041F239 = {
 			isa = PBXGroup;
 			children = (
+				447A85591A5E72A80041F239 /* AVFoundation.framework */,
 				447A85321A5E70C90041F239 /* QRCodes */,
 				447A854C1A5E70C90041F239 /* QRCodesTests */,
 				447A85311A5E70C90041F239 /* Products */,
@@ -168,6 +172,7 @@
 				TargetAttributes = {
 					447A852F1A5E70C90041F239 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 35B2KE884X;
 					};
 					447A85481A5E70C90041F239 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -345,9 +350,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = QRCodes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6d8e3a73-776f-462c-bd19-03858002011a";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -355,9 +364,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = QRCodes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6d8e3a73-776f-462c-bd19-03858002011a";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -414,6 +427,7 @@
 				447A85551A5E70C90041F239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		447A85561A5E70C90041F239 /* Build configuration list for PBXNativeTarget "QRCodesTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +436,7 @@
 				447A85581A5E70C90041F239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

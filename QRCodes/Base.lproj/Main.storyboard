@@ -1,25 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30W-ud-L31" userLabel="ScannerView">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj2-ec-ZWH">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" delaysContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Az-gl-IrZ">
+                                <rect key="frame" x="45" y="340" width="510" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="0.35000000000000003" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9f-yK-PoH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="0.35000000000000003" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Qj2-ec-ZWH" secondAttribute="centerX" id="3Gs-Cs-9sB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Az-gl-IrZ" secondAttribute="trailing" constant="29" id="3RY-5Y-J7P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Az-gl-IrZ" secondAttribute="bottom" constant="60" id="8oV-Ra-Mcj"/>
+                            <constraint firstItem="t9f-yK-PoH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Amx-cl-k2R"/>
+                            <constraint firstAttribute="centerY" secondItem="Qj2-ec-ZWH" secondAttribute="centerY" id="AsK-0u-Bk3"/>
+                            <constraint firstItem="30W-ud-L31" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="B1K-KO-j3M"/>
+                            <constraint firstAttribute="centerY" secondItem="Qj2-ec-ZWH" secondAttribute="centerY" id="Cvb-wK-1dc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qj2-ec-ZWH" secondAttribute="trailing" constant="124" id="QT9-kD-YCx"/>
+                            <constraint firstAttribute="centerX" secondItem="4Az-gl-IrZ" secondAttribute="centerX" id="aXa-gN-pv8"/>
+                            <constraint firstItem="Qj2-ec-ZWH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="ccc-cP-aP1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qj2-ec-ZWH" secondAttribute="bottom" constant="140" id="cgO-Am-9Gt"/>
+                            <constraint firstItem="30W-ud-L31" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="cpN-im-VNo"/>
+                            <constraint firstItem="4Az-gl-IrZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="h33-aK-oIQ"/>
+                            <constraint firstAttribute="centerX" secondItem="Qj2-ec-ZWH" secondAttribute="centerX" id="kq8-X5-e9c"/>
+                            <constraint firstItem="t9f-yK-PoH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ucH-r3-RRY"/>
+                            <constraint firstItem="Qj2-ec-ZWH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="124" id="uiU-pJ-TQp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="30W-ud-L31" secondAttribute="trailing" constant="-20" id="x1h-MK-3gx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t9f-yK-PoH" secondAttribute="trailing" constant="-20" id="xod-v7-EpO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="30W-ud-L31" secondAttribute="bottom" id="yqf-gk-V9r"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scannerResultView" destination="4Az-gl-IrZ" id="Ghx-sT-aQr"/>
+                        <outlet property="scannerTipLabel" destination="Qj2-ec-ZWH" id="MzC-wU-Vpe"/>
+                        <outlet property="scannerView" destination="30W-ud-L31" id="tZ9-o6-NS8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="51" y="464"/>
         </scene>
     </scenes>
 </document>
