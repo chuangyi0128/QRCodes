@@ -48,7 +48,7 @@
     // Device
     AVCaptureDevice *device = [self backCamera];
     if (device == nil) {
-        self.scannerTipLabel.text = @"你的设备貌似没有摄像头啊..\n请手动输入";
+        self.scannerTipLabel.text = @"你的设备貌似没有摄像头啊";
         self.scannerTipLabel.hidden = NO;
         return;
     }
@@ -57,7 +57,7 @@
     NSError *error;
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
     if (error) {
-        self.scannerTipLabel.text = [NSString stringWithFormat:@"获取摄像头失败\n重新打开本页面或者手动输入\nError:%@\n%@", error.domain, error.description];
+        self.scannerTipLabel.text = [NSString stringWithFormat:@"获取摄像头失败\nError:%@\n%@", error.domain, error.description];
         self.scannerTipLabel.hidden = NO;
         return;
     }
@@ -107,7 +107,19 @@
             [stringValue appendFormat:@"%@\n", metadataObject.stringValue];
         }
         self.scannerResultView.hidden = NO;
+        
+        NSString *originText = self.scannerResultView.text;
         self.scannerResultView.text = [stringValue copy];
+        
+        if (![originText isEqualToString:self.scannerResultView.text]) {
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+            [animation setDuration:0.2f];
+            [animation setRemovedOnCompletion:YES];
+            [animation setFillMode:kCAFillModeBoth];
+            [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+            [animation setFromValue:(id)[UIColor colorWithWhite:1.0f alpha:0.8f].CGColor];
+            [self.scannerResultView.layer addAnimation:animation forKey:@"AppearAnimation"];
+        }
     }
 }
 
