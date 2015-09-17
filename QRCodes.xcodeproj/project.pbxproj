@@ -172,7 +172,7 @@
 				TargetAttributes = {
 					447A852F1A5E70C90041F239 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 35B2KE884X;
+						DevelopmentTeam = A8UPS6A429;
 					};
 					447A85481A5E70C90041F239 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -354,9 +354,10 @@
 				INFOPLIST_FILE = QRCodes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Netease.QRCodes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d8e3a73-776f-462c-bd19-03858002011a";
-				VALID_ARCHS = arm64;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -368,9 +369,10 @@
 				INFOPLIST_FILE = QRCodes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Netease.QRCodes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d8e3a73-776f-462c-bd19-03858002011a";
-				VALID_ARCHS = arm64;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
